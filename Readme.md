@@ -19,7 +19,7 @@ P.S: 其中除支持 OAuth ，其它只支持 SSO ，只能安装相应的客户
 3. 在 ```application:didFinishLaunchingWithOptions:``` 添加  
 
 ```
-[[Diplomat sharedInstance] registerWithConfigurations:@{kDiplomatTypeWechat: @{kDiplomatAppIdKey: @"wxd930ea5d5a258f4f",                                                                                                                                                kDiplomatAppSecretKey: @"db426a9829e4b49a0dcac7b4162da6b6"},kDiplomatTypeQQ: @{kDiplomatAppIdKey: @"222222"}}];
+  [[Diplomat sharedInstance] registerWithConfigurations:@{kDiplomatTypeWechat: @{kDiplomatAppIdKey: @"wxd930ea5d5a258f4f", kDiplomatAppSecretKey: @"db426a9829e4b49a0dcac7b4162da6b6"}, kDiplomatTypeQQ: @{kDiplomatAppIdKey: @"222222"}}];
 ```  
 
 4. 授权登录。

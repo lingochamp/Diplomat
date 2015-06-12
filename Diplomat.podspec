@@ -1,19 +1,10 @@
 Pod::Spec.new do |s|
   s.name         = "Diplomat"
   s.version      = "0.2"
-  s.summary      = "lls used third party SDK."
-  s.description  = <<-DESC
-                    Thrid party SDK collector
-
-                   * Think: Why did you write this? What is the focus? What does it do?
-                   * CocoaPods will be using this to generate tags, and improve search results.
-                   * Try to keep it short, snappy and to the point.
-                   * Finally, don't worry about the indent, CocoaPods strips it!
-                   DESC
-
-  s.homepage     = "https://github.com/cloudorz/Diplomat/wiki"
-  s.license      = "MIT"
-  s.author             = { "Cloud" => "cloudcry@gmail.com" }
+  s.summary      = "The third party SDKs unified API lib."
+  s.homepage     = "https://github.com/cloudorz/Diplomat"
+  s.license      = { :type => 'MIT License', :file => 'LICENSE' }
+  s.author       = { "Cloud" => "cloudcry@gmail.com" }
   s.platform     = :ios, "7.0"
   s.source       = { :git => "https://github.com/cloudorz/Diplomat.git", :tag => "#{s.version}" }
   s.frameworks = "SystemConfiguration", "ImageIO"

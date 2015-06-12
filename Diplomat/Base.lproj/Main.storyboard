@@ -1,0 +1,204 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7702" systemVersion="14D136" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="vXZ-lx-hvc">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7701"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="ufC-wZ-h7g">
+            <objects>
+                <viewController id="vXZ-lx-hvc" customClass="ViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="jyV-Pf-zRb"/>
+                        <viewControllerLayoutGuide type="bottom" id="2fi-mo-0CV"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="kh9-bI-dsS">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0F8-Gg-eLl">
+                                <rect key="frame" x="16" y="52" width="60" height="30"/>
+                                <state key="normal" title="微信登录">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="wechatLoginAction:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="7V5-p4-ODX"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6T6-Bx-c6S">
+                                <rect key="frame" x="84" y="52" width="60" height="30"/>
+                                <state key="normal" title="文本分享">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="shareTextToWechat:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="u4t-hX-7rJ"/>
+                                    <action selector="wechatLoginAction:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="Bip-oH-fCx"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Hji-kN-YY1">
+                                <rect key="frame" x="152" y="52" width="60" height="30"/>
+                                <state key="normal" title="图片分享">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="sharePictureToWechat:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="TK3-8w-JEm"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GzD-J0-xcT">
+                                <rect key="frame" x="220" y="52" width="60" height="30"/>
+                                <state key="normal" title="音乐分享">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="shareMusicToWechat:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="BMh-X4-7gA"/>
+                                    <action selector="wechatLoginAction:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="24j-Gv-K3R"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VsZ-6c-uj6">
+                                <rect key="frame" x="288" y="52" width="60" height="30"/>
+                                <state key="normal" title="视频分享">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="shareVideoToWechat:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="plT-JC-nIt"/>
+                                    <action selector="wechatLoginAction:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="Ole-CI-loC"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="faP-Cd-zus">
+                                <rect key="frame" x="152" y="94" width="60" height="30"/>
+                                <state key="normal" title="微博登录">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="weiboLoginAction:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="UJx-4r-0GR"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QDJ-Ze-XsJ">
+                                <rect key="frame" x="220" y="94" width="60" height="30"/>
+                                <state key="normal" title="文本分享">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="shareTextToWeiboAction:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="RSR-19-mXP"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="t0T-39-vFa">
+                                <rect key="frame" x="84" y="94" width="60" height="30"/>
+                                <state key="normal" title="音乐分享">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="shareToWeiboAudioAction:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="vzC-A8-DGB"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="返回的信息" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Jsl-04-FXA">
+                                <rect key="frame" x="16" y="206" width="568" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lcy-89-Dli">
+                                <rect key="frame" x="16" y="136" width="58" height="30"/>
+                                <state key="normal" title="QQ 登录">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="qqLoginAction:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="ha2-fM-Xsc"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Qqy-5C-IoR">
+                                <rect key="frame" x="82" y="136" width="60" height="30"/>
+                                <state key="normal" title="文本分享">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="shareTextToQQAction:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="Y4t-6h-EpJ"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="F3R-3j-bOH">
+                                <rect key="frame" x="150" y="136" width="60" height="30"/>
+                                <state key="normal" title="图片分享">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="shareImageToQQAction:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="vTl-Lz-Bcn"/>
+                                    <action selector="shareTextToQQAction:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="cUO-0f-Pe5"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="c6d-Yg-U74">
+                                <rect key="frame" x="220" y="136" width="60" height="30"/>
+                                <state key="normal" title="音乐分享">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="shareMusicToQQAction:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="lBG-l3-Jlx"/>
+                                    <action selector="shareTextToQQAction:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="srJ-IT-EKg"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2L6-Pc-oSh">
+                                <rect key="frame" x="288" y="136" width="60" height="30"/>
+                                <state key="normal" title="视频分享">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="shareVideoToQQAction:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="SOT-z0-114"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hbI-n5-2Tv">
+                                <rect key="frame" x="16" y="94" width="60" height="30"/>
+                                <state key="normal" title="视频分享">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="shareVideoToWeiboAction:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="ewN-oI-Mhh"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Vfe-8m-RE3">
+                                <rect key="frame" x="356" y="136" width="60" height="30"/>
+                                <state key="normal" title="新闻分享">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="shareNewsToQQAction:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="xEG-rA-AZv"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="QDJ-Ze-XsJ" firstAttribute="centerY" secondItem="faP-Cd-zus" secondAttribute="centerY" id="0KW-w3-hMn"/>
+                            <constraint firstItem="hbI-n5-2Tv" firstAttribute="centerY" secondItem="t0T-39-vFa" secondAttribute="centerY" id="0xJ-0u-5uK"/>
+                            <constraint firstItem="lcy-89-Dli" firstAttribute="centerY" secondItem="Qqy-5C-IoR" secondAttribute="centerY" id="2lf-Gy-tad"/>
+                            <constraint firstItem="t0T-39-vFa" firstAttribute="leading" secondItem="hbI-n5-2Tv" secondAttribute="trailing" constant="8" id="4Rs-EA-oFf"/>
+                            <constraint firstItem="Hji-kN-YY1" firstAttribute="leading" secondItem="6T6-Bx-c6S" secondAttribute="trailing" constant="8" id="5Gh-nu-9ah"/>
+                            <constraint firstItem="0F8-Gg-eLl" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leading" constant="16" id="5Hq-Km-o8e"/>
+                            <constraint firstItem="Hji-kN-YY1" firstAttribute="centerY" secondItem="6T6-Bx-c6S" secondAttribute="centerY" id="78o-Q6-P1Q"/>
+                            <constraint firstItem="Jsl-04-FXA" firstAttribute="top" secondItem="lcy-89-Dli" secondAttribute="bottom" constant="40" id="7i6-ja-iTX"/>
+                            <constraint firstItem="GzD-J0-xcT" firstAttribute="centerY" secondItem="VsZ-6c-uj6" secondAttribute="centerY" id="Caa-rp-p1t"/>
+                            <constraint firstItem="0F8-Gg-eLl" firstAttribute="centerY" secondItem="6T6-Bx-c6S" secondAttribute="centerY" id="G09-tX-0dt"/>
+                            <constraint firstItem="QDJ-Ze-XsJ" firstAttribute="leading" secondItem="faP-Cd-zus" secondAttribute="trailing" constant="8" id="Job-kh-N3o"/>
+                            <constraint firstItem="Qqy-5C-IoR" firstAttribute="leading" secondItem="lcy-89-Dli" secondAttribute="trailing" constant="8" id="Kgf-tO-dtg"/>
+                            <constraint firstItem="6T6-Bx-c6S" firstAttribute="leading" secondItem="0F8-Gg-eLl" secondAttribute="trailing" constant="8" id="Kkb-4O-PGR"/>
+                            <constraint firstAttribute="trailing" secondItem="Jsl-04-FXA" secondAttribute="trailing" constant="16" id="Nb3-xe-lhG"/>
+                            <constraint firstItem="faP-Cd-zus" firstAttribute="top" secondItem="0F8-Gg-eLl" secondAttribute="bottom" constant="12" id="Ose-o0-JZL"/>
+                            <constraint firstItem="faP-Cd-zus" firstAttribute="centerY" secondItem="t0T-39-vFa" secondAttribute="centerY" id="Pdc-Kz-eA0"/>
+                            <constraint firstItem="GzD-J0-xcT" firstAttribute="leading" secondItem="Hji-kN-YY1" secondAttribute="trailing" constant="8" id="Ql0-w8-vvj"/>
+                            <constraint firstItem="GzD-J0-xcT" firstAttribute="centerY" secondItem="Hji-kN-YY1" secondAttribute="centerY" id="UKf-0w-PSt"/>
+                            <constraint firstItem="Jsl-04-FXA" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leading" constant="16" id="V9I-xr-BpL"/>
+                            <constraint firstItem="lcy-89-Dli" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leading" constant="16" id="Zh5-WM-6WP"/>
+                            <constraint firstItem="faP-Cd-zus" firstAttribute="leading" secondItem="t0T-39-vFa" secondAttribute="trailing" constant="8" id="cXf-MG-gzy"/>
+                            <constraint firstItem="0F8-Gg-eLl" firstAttribute="top" secondItem="jyV-Pf-zRb" secondAttribute="bottom" constant="32" id="dbb-a8-hce"/>
+                            <constraint firstItem="hbI-n5-2Tv" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leading" constant="16" id="gAv-4U-kmd"/>
+                            <constraint firstItem="VsZ-6c-uj6" firstAttribute="leading" secondItem="GzD-J0-xcT" secondAttribute="trailing" constant="8" id="lnx-c3-QCy"/>
+                            <constraint firstItem="lcy-89-Dli" firstAttribute="top" secondItem="faP-Cd-zus" secondAttribute="bottom" constant="12" id="oLU-uA-ZKD"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="contentLabel" destination="Jsl-04-FXA" id="3AJ-be-vly"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
+            </objects>
+        </scene>
+    </scenes>
+</document>

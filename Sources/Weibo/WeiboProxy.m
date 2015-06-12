@@ -188,7 +188,7 @@ NSString * const kDiplomatTypeWeibo = @"diplomat_weibo";
   if (self.thumbnailableImage)
   {
     WBImageObject *imageObject = [WBImageObject object];
-    imageObject.imageData = UIImageJPEGRepresentation([self.thumbnailableImage resizedImageByWidth:320], 0.75);
+    imageObject.imageData = UIImageJPEGRepresentation(self.thumbnailableImage, 0.85);
     weiboMessage.imageObject = imageObject;
   }
 

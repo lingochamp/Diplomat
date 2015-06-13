@@ -16,26 +16,23 @@ P.S: 其中除支持 OAuth ，其它只支持 SSO ，只能安装相应的客户
 ``` #import <Diplomat/WechatProxy.h> ```  
 ``` #import <Diplomat/QQProxy.h> ```  
 
-3. 在 ```application:didFinishLaunchingWithOptions:``` 添加  
+3. 使用
 
 ```objc
-  [[Diplomat sharedInstance] registerWithConfigurations:@{kDiplomatTypeWechat: @{kDiplomatAppIdKey: @"wxd930ea5d5a258f4f",
-                                                                                 kDiplomatAppSecretKey: @"db426a9829e4b49a0dcac7b4162da6b6"},
-                                                          kDiplomatTypeQQ: @{kDiplomatAppIdKey: @"222222"}}];
-```  
+// 在 ```application:didFinishLaunchingWithOptions:``` 添加  
+[[Diplomat sharedInstance] registerWithConfigurations:@{kDiplomatTypeWechat: @{kDiplomatAppIdKey: @"wxd930ea5d5a258f4f",
+                                                                               kDiplomatAppSecretKey: @"db426a9829e4b49a0dcac7b4162da6b6"},
+                                                        kDiplomatTypeQQ: @{kDiplomatAppIdKey: @"222222"}}];
 
-4. 授权登录。
+// 授权登录。
   
-```objc
 [[Diplomat sharedInstance] authWithName:thirdPartyName
                               completed:^(id result, NSError *error) {
                                  // ...
                             }];
-```  
   
-5. 分享。
+// 分享。
  
-```objc
  // Create DTMessage ...
  [[Diplomat sharedInstance] share:message
                              name:thirdPartyName

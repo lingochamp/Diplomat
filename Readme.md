@@ -19,26 +19,25 @@ P.S: 其中除支持 OAuth ，其它只支持 SSO ，只能安装相应的客户
 3. 使用
 
 ```objc
-// 在 ```application:didFinishLaunchingWithOptions:``` 添加  
+
+// 在 application:didFinishLaunchingWithOptions: 添加  
 [[Diplomat sharedInstance] registerWithConfigurations:@{kDiplomatTypeWechat: @{kDiplomatAppIdKey: @"wxd930ea5d5a258f4f",
                                                                                kDiplomatAppSecretKey: @"db426a9829e4b49a0dcac7b4162da6b6"},
                                                         kDiplomatTypeQQ: @{kDiplomatAppIdKey: @"222222"}}];
 
 // 授权登录。
-  
 [[Diplomat sharedInstance] authWithName:thirdPartyName
                               completed:^(id result, NSError *error) {
                                  // ...
                             }];
   
 // 分享。
- 
- // Create DTMessage ...
- [[Diplomat sharedInstance] share:message
-                             name:thirdPartyName
-                        completed:^(id result, NSError *error) {
-	                        // ...
-                        }];
+ // Create DTMessage message ...
+[[Diplomat sharedInstance] share:message
+                            name:thirdPartyName
+                       completed:^(id result, NSError *error) {
+                        // ...
+                       }];
 ```
 
 

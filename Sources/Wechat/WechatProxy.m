@@ -9,7 +9,7 @@
 #import "WechatProxy.h"
 
 #import <UIKit/UIKit.h>
-#import <UIImage+ResizeMagick.h>
+#import "UIImage+ResizeMagick.h"
 
 static NSString * const kWechatErrorDomain = @"wechat_error_domain";
 NSString * const kDiplomatTypeWechat = @"diplomat_wechat";

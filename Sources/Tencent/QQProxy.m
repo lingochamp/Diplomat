@@ -8,7 +8,7 @@
 
 #import "QQProxy.h"
 
-#import <UIImage+ResizeMagick.h>
+#import "UIImage+ResizeMagick.h"
 
 static NSString * const kQQErrorDomain = @"qq_error_domain";
 NSString * const kDiplomatTypeQQ = @"diplomat_qq";

@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name         = "Diplomat"
-  s.version      = "0.2.1"
+  s.version      = "0.3"
   s.summary      = "The third party SDKs unified API lib."
   s.homepage     = "https://github.com/cloudorz/Diplomat"
   s.license      = { :type => 'MIT License', :file => 'LICENSE' }
@@ -12,7 +12,6 @@ Pod::Spec.new do |s|
   s.requires_arc = true
 
   s.subspec 'Core' do |core|
-    core.dependency 'UIImage-ResizeMagick'
     core.source_files = "Sources/*.{h,m}"
   end
 

@@ -9,7 +9,7 @@
 #import "WeiboProxy.h"
 #import "WeiboUser.h"
 
-#import <UIImage+ResizeMagick.h>
+#import "UIImage+ResizeMagick.h"
 
 static NSString * const kWeiboTokenKey = @"weibo_token";
 static NSString * const kWeiboUserIdKey = @"weibo_user_id";

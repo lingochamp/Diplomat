@@ -19,7 +19,8 @@ extern NSString * __nonnull const kDiplomatTencentQQShareType;
 /**
  *   分享请求发送场景
  */
-typedef NS_ENUM(NSUInteger, TencentShareScene){
+typedef NS_ENUM(NSUInteger, TencentShareScene)
+{
     /**
      *  QQ分享类型
      */
@@ -27,7 +28,7 @@ typedef NS_ENUM(NSUInteger, TencentShareScene){
     /**
      *  QZone分享类型
      */
-    TencentSceneZone
+    TencentSceneQZone
 };
 
 @interface QQProxy : NSObject <DiplomatProxyProtocol>
@@ -38,6 +39,7 @@ typedef NS_ENUM(NSUInteger, TencentShareScene){
 - (QQApiObject * __nonnull)qqMessage;
 @end
 
+/** @brief QZone分享不支持text类型和image类型分享 */
 @interface DTTextMessage (QQ)
 @end
 

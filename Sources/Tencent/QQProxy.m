@@ -74,20 +74,33 @@ NSString * const kDiplomatTypeQQ = @"diplomat_qq";
 
 - (void)share:(DTMessage * __nonnull)message completed:(DiplomatCompletedBlock __nullable)compltetedBlock
 {
-  self.block = compltetedBlock;
-
-  QQApiObject *apiObject = [message qqMessage];
-  apiObject.cflag = kQQAPICtrlFlagQQShare;
-  SendMessageToQQReq *request = [SendMessageToQQReq reqWithContent:apiObject];
-  QQApiSendResultCode status = [QQApiInterface sendReq:request];
-  NSString *errorMessage = [self handleQQSendResult:status];
-
-  if (errorMessage)
-  {
-    self.block = nil;
-    compltetedBlock(nil, [NSError errorWithDomain:kQQErrorDomain code:-1024 userInfo:@{NSLocalizedDescriptionKey: errorMessage}]);
-  }
+    self.block = compltetedBlock;
+    
+    QQApiObject *apiObject = [message qqMessage];
+    apiObject.cflag = kQQAPICtrlFlagQQShare;
+    SendMessageToQQReq *request = [SendMessageToQQReq reqWithContent:apiObject];
+    
+    //区别手机QQ和QZone请求
+    QQApiSendResultCode status;
+    if (message.userInfo &&
+        message.userInfo[kDiplomatTencentQQShareType] &&
+        [message.userInfo[kDiplomatTencentQQShareType] intValue] == TencentSceneZone
+        ) {
+        status = [QQApiInterface SendReqToQZone:request];
+    }
+    else {
+        status = [QQApiInterface sendReq:request];
+    }
+    
+    NSString *errorMessage = [self handleQQSendResult:status];
+    
+    if (errorMessage)
+    {
+        self.block = nil;
+        compltetedBlock(nil, [NSError errorWithDomain:kQQErrorDomain code:-1024 userInfo:@{NSLocalizedDescriptionKey: errorMessage}]);
+    }
 }
+
 
 - (BOOL)isInstalled
 {

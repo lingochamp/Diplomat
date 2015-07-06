@@ -12,6 +12,7 @@
 
 static NSString * const kQQErrorDomain = @"qq_error_domain";
 NSString * const kDiplomatTypeQQ = @"diplomat_qq";
+NSString * const kTencentQQSceneType = @"diplmat_tencent_qq_scene_type";
 
 @interface QQProxy () <QQApiInterfaceDelegate, TencentSessionDelegate>
 @property (copy, nonatomic) DiplomatCompletedBlock block;
@@ -83,12 +84,14 @@ NSString * const kDiplomatTypeQQ = @"diplomat_qq";
     //区别手机QQ和QZone请求
     QQApiSendResultCode status;
     if (message.userInfo &&
-        message.userInfo[kDiplomatTencentQQShareType] &&
-        [message.userInfo[kDiplomatTencentQQShareType] intValue] == TencentSceneZone
-        ) {
+        message.userInfo[kTencentQQSceneType] &&
+        [message.userInfo[kTencentQQSceneType] intValue] == TencentSceneZone
+        )
+    {
         status = [QQApiInterface SendReqToQZone:request];
     }
-    else {
+    else
+    {
         status = [QQApiInterface sendReq:request];
     }
     

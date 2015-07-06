@@ -537,7 +537,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "com.liulishuo.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = Tydus;
-				PROVISIONING_PROFILE = "2a26add2-770b-4fd7-8cc4-7eaef29611e2";
+				PROVISIONING_PROFILE = "7b2fe933-c4a8-4a4a-b1e8-e91a1121fa2f";
 			};
 			name = Debug;
 		};
@@ -557,7 +557,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "com.liulishuo.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = Tydus;
-				PROVISIONING_PROFILE = "2a26add2-770b-4fd7-8cc4-7eaef29611e2";
+				PROVISIONING_PROFILE = "7b2fe933-c4a8-4a4a-b1e8-e91a1121fa2f";
 			};
 			name = Release;
 		};

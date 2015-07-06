@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7702" systemVersion="14D136" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="vXZ-lx-hvc">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14E46" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="vXZ-lx-hvc">
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7701"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
@@ -33,7 +33,6 @@
                                 </state>
                                 <connections>
                                     <action selector="shareTextToWechat:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="u4t-hX-7rJ"/>
-                                    <action selector="wechatLoginAction:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="Bip-oH-fCx"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Hji-kN-YY1">
@@ -52,7 +51,6 @@
                                 </state>
                                 <connections>
                                     <action selector="shareMusicToWechat:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="BMh-X4-7gA"/>
-                                    <action selector="wechatLoginAction:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="24j-Gv-K3R"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VsZ-6c-uj6">
@@ -62,7 +60,6 @@
                                 </state>
                                 <connections>
                                     <action selector="shareVideoToWechat:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="plT-JC-nIt"/>
-                                    <action selector="wechatLoginAction:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="Ole-CI-loC"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="faP-Cd-zus">
@@ -123,7 +120,6 @@
                                 </state>
                                 <connections>
                                     <action selector="shareImageToQQAction:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="vTl-Lz-Bcn"/>
-                                    <action selector="shareTextToQQAction:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="cUO-0f-Pe5"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="c6d-Yg-U74">
@@ -133,7 +129,6 @@
                                 </state>
                                 <connections>
                                     <action selector="shareMusicToQQAction:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="lBG-l3-Jlx"/>
-                                    <action selector="shareTextToQQAction:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="srJ-IT-EKg"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2L6-Pc-oSh">

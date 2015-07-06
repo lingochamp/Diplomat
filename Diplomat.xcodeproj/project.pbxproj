@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		611C3BB01B4A35EB00EAB4CE /* Diplomat-acknowledgements.md in Sources */ = {isa = PBXBuildFile; fileRef = 611C3BAF1B4A35EB00EAB4CE /* Diplomat-acknowledgements.md */; };
 		6130F8751B2A5996005788E4 /* WeiboProxy.m in Sources */ = {isa = PBXBuildFile; fileRef = 6130F8741B2A5996005788E4 /* WeiboProxy.m */; };
 		6130F8791B2A59E5005788E4 /* WechatProxy.m in Sources */ = {isa = PBXBuildFile; fileRef = 6130F8781B2A59E5005788E4 /* WechatProxy.m */; };
 		6130F87D1B2A5A07005788E4 /* QQProxy.m in Sources */ = {isa = PBXBuildFile; fileRef = 6130F87C1B2A5A07005788E4 /* QQProxy.m */; };
@@ -43,6 +44,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		611C3BAF1B4A35EB00EAB4CE /* Diplomat-acknowledgements.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = "Diplomat-acknowledgements.md"; sourceTree = "<group>"; };
 		6130F8731B2A5996005788E4 /* WeiboProxy.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WeiboProxy.h; sourceTree = "<group>"; };
 		6130F8741B2A5996005788E4 /* WeiboProxy.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WeiboProxy.m; sourceTree = "<group>"; };
 		6130F8771B2A59E5005788E4 /* WechatProxy.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WechatProxy.h; sourceTree = "<group>"; };
@@ -242,6 +244,7 @@
 				616502241B009465004246A3 /* Diplomat.m */,
 				61DD2B7D1B301EB700B13903 /* UIImage+ResizeMagick.h */,
 				61DD2B7E1B301EB700B13903 /* UIImage+ResizeMagick.m */,
+				611C3BAF1B4A35EB00EAB4CE /* Diplomat-acknowledgements.md */,
 			);
 			path = Sources;
 			sourceTree = "<group>";
@@ -391,6 +394,7 @@
 			files = (
 				616501EA1B0088DF004246A3 /* ViewController.m in Sources */,
 				616501E71B0088DF004246A3 /* AppDelegate.m in Sources */,
+				611C3BB01B4A35EB00EAB4CE /* Diplomat-acknowledgements.md in Sources */,
 				616501E41B0088DF004246A3 /* main.m in Sources */,
 				61DD2B7F1B301EB700B13903 /* UIImage+ResizeMagick.m in Sources */,
 				616502251B009465004246A3 /* Diplomat.m in Sources */,

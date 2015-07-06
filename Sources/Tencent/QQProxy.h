@@ -14,7 +14,7 @@
 #import "QQApiInterface.h"
 
 extern NSString * __nonnull const kDiplomatTypeQQ;
-extern NSString * __nonnull const kTencentQQSceneType;
+extern NSString * __nonnull const kTencentQQSceneTypeKey;
 
 /**
  *   分享请求发送场景
@@ -22,11 +22,11 @@ extern NSString * __nonnull const kTencentQQSceneType;
 typedef NS_ENUM(NSUInteger, TencentShareScene)
 {
     /**
-     *  QQ分享类型，默认设置。
+     *  QQ 分享类型（默认）。
      */
     TencentSceneQQ = 1,
     /**
-     *  QZone分享类型。
+     *  QZone 分享类型。
      */
     TencentSceneZone
 };

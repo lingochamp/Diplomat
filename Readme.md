@@ -40,8 +40,8 @@ P.S: 其中除微博支持 OAuth ，其它第三方只支持 SSO ，需安装相
                        }];
 ```
 
-4. DTMessage 中 userInfo 的使用。  
-userInfo 是用来携带额外的信息。
+### DTMessage 中 userInfo 的使用。  
+userInfo 是用来携带额外的信息。  
 微信分享场景的选择： 
 ```objc
 DTMessage *message = DTMessage()

@@ -34,7 +34,6 @@ NSString * const kWechatSceneTypeKey = @"wechat_scene_type_key";
   [[Diplomat sharedInstance] registerProxyObject:[self proxy] withName:kDiplomatTypeWechat];
 }
 
-// 在注册微信的 key 中包含了 appId 和 secret 通过 '#' 链接成一串字符。
 - (void)registerWithConfiguration:(NSDictionary * __nonnull)configuration
 {
   self.wechatAppId = configuration[kDiplomatAppIdKey];

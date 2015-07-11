@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name         = "Diplomat"
-  s.version      = "0.3"
+  s.version      = "0.3.1"
   s.summary      = "The third party SDKs unified API lib."
   s.homepage     = "https://github.com/cloudorz/Diplomat"
   s.license      = { :type => 'MIT License', :file => 'LICENSE' }
@@ -13,6 +13,7 @@ Pod::Spec.new do |s|
 
   s.subspec 'Core' do |core|
     core.source_files = "Sources/*.{h,m}"
+    core.resources = "Sources/*.md"
   end
 
   s.subspec 'Weibo' do |weibo|

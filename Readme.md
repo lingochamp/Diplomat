@@ -40,6 +40,25 @@ P.S: 其中除微博支持 OAuth ，其它第三方只支持 SSO ，需安装相
                        }];
 ```
 
+### DTMessage 中 userInfo 的使用。  
+userInfo 是用来携带额外的信息。  
+微信分享场景的选择： 
+```objc
+DTMessage *message = DTMessage()
+// ...
+message.userInfo = @{kWechatSceneTypeKey: @(WXSceneTimeline)}
+// WXSceneTimeline: 朋友圈（默认）、WXSceneSession: 好友、WXSceneFavorite: 收藏。
+```
+
+通过 Safari 分享到 QZone （感谢 [@hi-guy](https://github.com/hi-guy) 贡献）:  
+```objc
+DTMessage *message = DTMessage()
+// ...
+message.userInfo = @{kTencentQQSceneTypeKey: @(TencentSceneZone)}
+// TencentSceneQQ: 通过 QQ 客户端分享（默认，包含了分享到 QZone 选项）, 
+// TencentSceneZone: 通过 Safari 只分享到 QZone （有 QQ 客户端时不推荐使用）。
+```
+
 
 ### 扩展第三方 SDK （详见实现逻辑）  
 1. 实现协议 *DiplomatProxyProtocol* 。

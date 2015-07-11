@@ -14,6 +14,22 @@
 #import "QQApiInterface.h"
 
 extern NSString * __nonnull const kDiplomatTypeQQ;
+extern NSString * __nonnull const kTencentQQSceneTypeKey;
+
+/**
+ *   分享请求发送场景
+ */
+typedef NS_ENUM(NSUInteger, TencentShareScene)
+{
+    /**
+     *  QQ 分享类型（默认）。
+     */
+    TencentSceneQQ = 1,
+    /**
+     *  QZone 分享类型。
+     */
+    TencentSceneZone
+};
 
 @interface QQProxy : NSObject <DiplomatProxyProtocol>
 @end

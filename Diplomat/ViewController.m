@@ -162,7 +162,7 @@ static enum WXScene kWechatScene = WXSceneSession;
   message.audioUrl = @"http://share.liulishuo.com/v2/share/8a6d90f0dcfa013245d752540071c562";
   message.audioDataUrl = @"http://cdn.llsapp.com/54251c18636d734cc90b4900_Zjk0MWQwMDAwMDBiODdlNQ==_1431672097.mp3";
   message.thumbnailableImage = [UIImage imageNamed:@"IMG_0965_thumb.png"];
-  message.userInfo = @{kWechatSceneTypeKey: @(kWechatScene)};
+  message.userInfo = @{kWechatSceneTypeKey: @(kWechatScene), kTencentQQSceneType: @(TencentSceneZone)};
 
   return message;
 }

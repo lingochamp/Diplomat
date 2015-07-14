@@ -12,7 +12,7 @@
 
 static NSString * const kQQErrorDomain = @"qq_error_domain";
 NSString * const kDiplomatTypeQQ = @"diplomat_qq";
-NSString * const kTencentQQSceneTypeKey = @"diplmat_tencent_qq_scene_type";
+NSString * const kTencentQQSceneTypeKey = @"tencent_qq_scene_type_key";
 
 @interface QQProxy () <QQApiInterfaceDelegate, TencentSessionDelegate>
 @property (copy, nonatomic) DiplomatCompletedBlock block;
@@ -78,7 +78,6 @@ NSString * const kTencentQQSceneTypeKey = @"diplmat_tencent_qq_scene_type";
     self.block = compltetedBlock;
     
     QQApiObject *apiObject = [message qqMessage];
-    apiObject.cflag = kQQAPICtrlFlagQQShare;
     SendMessageToQQReq *request = [SendMessageToQQReq reqWithContent:apiObject];
     
     //区别手机QQ和QZone请求
@@ -88,10 +87,19 @@ NSString * const kTencentQQSceneTypeKey = @"diplmat_tencent_qq_scene_type";
         [message.userInfo[kTencentQQSceneTypeKey] intValue] == TencentSceneZone
         )
     {
-        status = [QQApiInterface SendReqToQZone:request];
+        if ([message isMemberOfClass:[DTTextMessage class]] || [message isMemberOfClass:[DTImageMessage class]])
+        {
+            apiObject.cflag = kQQAPICtrlFlagQZoneShareOnStart;
+            status = [QQApiInterface sendReq:request];
+        }
+        else
+        {
+            status = [QQApiInterface SendReqToQZone:request];
+        }
     }
     else
     {
+        apiObject.cflag = kQQAPICtrlFlagQQShare;
         status = [QQApiInterface sendReq:request];
     }
     

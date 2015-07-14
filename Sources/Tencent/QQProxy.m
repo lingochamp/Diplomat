@@ -8,7 +8,7 @@
 
 #import "QQProxy.h"
 
-#import "UIImage+ResizeMagick.h"
+#import "UIImage+DiplomatResize.h"
 
 static NSString * const kQQErrorDomain = @"qq_error_domain";
 NSString * const kDiplomatTypeQQ = @"diplomat_qq";
@@ -274,6 +274,14 @@ NSString * const kTencentQQSceneTypeKey = @"tencent_qq_scene_type_key";
 
 
 @implementation DTMediaMessage (QQ)
+- (NSData *)thumbnailImageData
+{
+  NSData *imageData = UIImageJPEGRepresentation([self.thumbnailableImage resizedImage:CGSizeMake(120, 120)
+                                                                 interpolationQuality:kCGInterpolationMedium], 0.65);
+
+  return imageData;
+}
+
 - (QQApiObject *)qqMessage
 {
   NSAssert(false, @"Should implement this method.");
@@ -286,10 +294,8 @@ NSString * const kTencentQQSceneTypeKey = @"tencent_qq_scene_type_key";
 @implementation DTImageMessage (QQ)
 - (QQApiObject *)qqMessage
 {
-  NSData *imageData = UIImageJPEGRepresentation([self.thumbnailableImage resizedImageByWidth:120], 0.75);
-
   return [QQApiImageObject objectWithData:self.imageData
-                         previewImageData:imageData
+                         previewImageData:[self thumbnailImageData]
                                     title:self.title
                               description:self.desc];
 }
@@ -299,11 +305,10 @@ NSString * const kTencentQQSceneTypeKey = @"tencent_qq_scene_type_key";
 @implementation DTAudioMessage (QQ)
 - (QQApiObject *)qqMessage
 {
-  NSData *imageData = UIImageJPEGRepresentation([self.thumbnailableImage resizedImageByWidth:120], 0.75);
   QQApiNewsObject *newsObject = [QQApiNewsObject objectWithURL:[NSURL URLWithString:self.audioUrl]
                                                          title:self.title
                                                    description:self.desc
-                                              previewImageData:imageData];
+                                              previewImageData:[self thumbnailImageData]];
 
   return newsObject;
 }
@@ -313,12 +318,10 @@ NSString * const kTencentQQSceneTypeKey = @"tencent_qq_scene_type_key";
 @implementation DTVideoMessage (QQ)
 - (QQApiObject *)qqMessage
 {
-  NSData *imageData = UIImageJPEGRepresentation([self.thumbnailableImage resizedImageByWidth:120], 0.75);
-
   QQApiNewsObject *newsObject = [QQApiNewsObject objectWithURL:[NSURL URLWithString:self.videoUrl]
                                                          title:self.title
                                                    description:self.desc
-                                              previewImageData:imageData];
+                                              previewImageData:[self thumbnailImageData]];
 
   return newsObject;
 }
@@ -328,12 +331,11 @@ NSString * const kTencentQQSceneTypeKey = @"tencent_qq_scene_type_key";
 @implementation DTPageMessage (QQ)
 - (QQApiObject *)qqMessage
 {
-  NSData *imageData = UIImageJPEGRepresentation([self.thumbnailableImage resizedImageByWidth:120], 0.75);
 
   QQApiNewsObject *newsObject = [QQApiNewsObject objectWithURL:[NSURL URLWithString:self.webPageUrl]
                                                          title:self.title
                                                    description:self.desc
-                                              previewImageData:imageData];
+                                              previewImageData:[self thumbnailImageData]];
   return newsObject;
 }
 

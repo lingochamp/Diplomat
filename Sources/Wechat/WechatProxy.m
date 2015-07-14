@@ -9,7 +9,7 @@
 #import "WechatProxy.h"
 
 #import <UIKit/UIKit.h>
-#import "UIImage+ResizeMagick.h"
+#import "UIImage+DiplomatResize.h"
 
 static NSString * const kWechatErrorDomain = @"wechat_error_domain";
 NSString * const kDiplomatTypeWechat = @"diplomat_wechat";
@@ -290,12 +290,12 @@ static NSString *urlEncode(id object)
 @implementation DTMediaMessage (Wechat)
 - (WXMediaMessage *)wechatMessage
 {
-  WXMediaMessage *mesage = [WXMediaMessage message];
-  mesage.title = self.title;
-  mesage.description = self.desc;
-  mesage.thumbData = UIImageJPEGRepresentation([self.thumbnailableImage resizedImageByWidth:120], 0.75);
+  WXMediaMessage *message = [WXMediaMessage message];
+  message.title = self.title;
+  message.description = self.desc;
+  message.thumbData = UIImageJPEGRepresentation([self.thumbnailableImage resizedImage:CGSizeMake(120, 120) interpolationQuality:kCGInterpolationMedium], 0.65);
 
-  return mesage;
+  return message;
 }
 @end
 
@@ -304,7 +304,7 @@ static NSString *urlEncode(id object)
 - (WXMediaMessage *)wechatMessage
 {
   WXMediaMessage *message = [super wechatMessage];
-
+  message.thumbData = UIImageJPEGRepresentation([self.thumbnailableImage resizedImage:CGSizeMake(240, 240) interpolationQuality:kCGInterpolationMedium], 0.65);
   WXImageObject *imageObect = [WXImageObject object];
   imageObect.imageData = self.imageData;
   imageObect.imageUrl = self.imageUrl;

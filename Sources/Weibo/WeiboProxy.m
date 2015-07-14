@@ -9,8 +9,6 @@
 #import "WeiboProxy.h"
 #import "WeiboUser.h"
 
-#import "UIImage+ResizeMagick.h"
-
 static NSString * const kWeiboTokenKey = @"weibo_token";
 static NSString * const kWeiboUserIdKey = @"weibo_user_id";
 static NSString * const kWeiboErrorDomain = @"weibo_error_domain";
@@ -188,7 +186,7 @@ NSString * const kDiplomatTypeWeibo = @"diplomat_weibo";
   if (self.thumbnailableImage)
   {
     WBImageObject *imageObject = [WBImageObject object];
-    imageObject.imageData = UIImageJPEGRepresentation(self.thumbnailableImage, 0.85);
+    imageObject.imageData = UIImageJPEGRepresentation(self.thumbnailableImage, 0.75);
     weiboMessage.imageObject = imageObject;
   }
 

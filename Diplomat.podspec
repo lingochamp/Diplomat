@@ -1,13 +1,13 @@
 Pod::Spec.new do |s|
   s.name         = "Diplomat"
-  s.version      = "0.3.1"
+  s.version      = "0.3.2"
   s.summary      = "The third party SDKs unified API lib."
   s.homepage     = "https://github.com/cloudorz/Diplomat"
   s.license      = { :type => 'MIT License', :file => 'LICENSE' }
   s.author       = { "Cloud" => "cloudcry@gmail.com" }
   s.platform     = :ios, "7.0"
   s.source       = { :git => "https://github.com/cloudorz/Diplomat.git", :tag => "#{s.version}" }
-  s.frameworks = "SystemConfiguration", "ImageIO"
+  s.frameworks = "SystemConfiguration", "ImageIO", "CoreTelephony"
   s.libraries = "stdc++", "sqlite3", "z"
   s.requires_arc = true
 

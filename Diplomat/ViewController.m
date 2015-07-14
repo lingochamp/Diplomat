@@ -147,7 +147,7 @@ static enum WXScene kWechatScene = WXSceneSession;
   message.title = @"我的头像";
   message.desc = @"我在分享我的头像来做测试";
   message.imageData = UIImageJPEGRepresentation([UIImage imageNamed:@"IMG_0965.jpg"], 0.75);;
-  message.thumbnailableImage = [UIImage imageNamed:@"IMG_0965_thumb.png"];
+  message.thumbnailableImage = [UIImage imageNamed:@"IMG_0965.jpg"];
   message.userInfo = @{kWechatSceneTypeKey: @(kWechatScene)};
 
   return message;

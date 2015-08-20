@@ -86,6 +86,22 @@ NSString * const kWechatSceneTypeKey = @"wechat_scene_type_key";
   [WXApi sendReq:wxReq];
 }
 
+- (void)pay:(id<DTWechatPaymentOrder> __nonnull)order completed:(DiplomatCompletedBlock __nullable)completedBlock
+{
+  self.block = completedBlock;
+
+  PayReq *payReq = [[PayReq alloc] init];
+  payReq.openID = [order openId];
+  payReq.partnerId = [order partnerId];
+  payReq.prepayId = [order prepayId];
+  payReq.nonceStr = [order nonceString];
+  payReq.timeStamp = [order timestamp];
+  payReq.package = [order package];
+  payReq.sign = [order sign];
+
+  [WXApi sendReq:payReq];
+}
+
 - (BOOL)isInstalled
 {
   return [WXApi isWXAppInstalled];
@@ -122,14 +138,7 @@ NSString * const kWechatSceneTypeKey = @"wechat_scene_type_key";
   {
     if (doneBlock)
     {
-      if (resp.errCode != WXSuccess)
-      {
-        doneBlock(nil, [NSError errorWithDomain:kWechatErrorDomain code:resp.errCode userInfo:@{NSLocalizedDescriptionKey: resp.errStr ?: @"分享失败"}]);
-      }
-      else
-      {
-        doneBlock(nil, nil);
-      }
+      doneBlock(nil, nil);
     }
   }
   else if([resp isKindOfClass:[SendAuthResp class]])
@@ -148,7 +157,13 @@ NSString * const kWechatSceneTypeKey = @"wechat_scene_type_key";
                                        userInfo:@{NSLocalizedDescriptionKey: @"微信授权失败"}]);
       }
     }
-
+  }
+  else if ([resp isKindOfClass:[PayResp class]])
+  {
+    if (doneBlock)
+    {
+        doneBlock(nil, nil);
+    }
   }
 }
 

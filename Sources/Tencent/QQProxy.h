@@ -13,8 +13,9 @@
 #import "TencentOAuth.h"
 #import "QQApiInterface.h"
 
-extern NSString * __nonnull const kDiplomatTypeQQ;
-extern NSString * __nonnull const kTencentQQSceneTypeKey;
+NS_ASSUME_NONNULL_BEGIN
+extern NSString * const kDiplomatTypeQQ;
+extern NSString * const kTencentQQSceneTypeKey;
 
 /**
  *   分享请求发送场景
@@ -35,8 +36,10 @@ typedef NS_ENUM(NSUInteger, TencentShareScene)
 @end
 
 @interface DTMessage (QQ)
+
 /** @brief 生成 QQ 或 QZone 对应的分享对象。  */
-- (QQApiObject * __nonnull)qqMessage;
+- (QQApiObject *)qqMessage;
+
 @end
 
 @interface DTTextMessage (QQ)
@@ -56,3 +59,4 @@ typedef NS_ENUM(NSUInteger, TencentShareScene)
 
 @interface DTPageMessage (QQ)
 @end
+NS_ASSUME_NONNULL_END

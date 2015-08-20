@@ -9,10 +9,11 @@
 #import <Foundation/Foundation.h>
 #import <UIKit/UIKit.h>
 
-extern NSString * __nonnull const kDiplomatAppIdKey;
-extern NSString * __nonnull const kDiplomatAppSecretKey;
-extern NSString * __nonnull const kDiplomatAppRedirectUrlKey;
-extern NSString * __nonnull const kDiplomatAppDebugModeKey;
+NS_ASSUME_NONNULL_BEGIN
+extern NSString * const kDiplomatAppIdKey;
+extern NSString * const kDiplomatAppSecretKey;
+extern NSString * const kDiplomatAppRedirectUrlKey;
+extern NSString * const kDiplomatAppDebugModeKey;
 
 @class DTMessage;
 
@@ -20,7 +21,7 @@ typedef void (^DiplomatCompletedBlock)(id __nullable result, NSError * __nullabl
 
 @protocol DiplomatProxyProtocol <NSObject>
 
-+ (id<DiplomatProxyProtocol> __nonnull)proxy;
++ (id<DiplomatProxyProtocol> __nonnull)proxy DEPRECATED_MSG_ATTRIBUTE("Use `Diplomat proxyForName:` instead.");
 
 - (void)registerWithConfiguration:(NSDictionary * __nonnull)configuration;
 - (BOOL)handleOpenURL:(NSURL * __nullable)url;
@@ -33,6 +34,16 @@ typedef void (^DiplomatCompletedBlock)(id __nullable result, NSError * __nullabl
 @interface Diplomat : NSObject
 
 + (nonnull instancetype)sharedInstance;
+
+/**
+ @brief 根据第三方的名字获取 Proxy 对象。
+
+ @param name Proxy 对应的第三方对象的名字。
+ @return 返回对应的第三方 Proxy ，可能为 nil 。
+
+ */
+- (id __nullable)proxyForName:(NSString *)name;
+
 /**
  @brief 将第三方库的 Proxy 注册到 Diplomat 。
 
@@ -181,3 +192,4 @@ typedef void (^DiplomatCompletedBlock)(id __nullable result, NSError * __nullabl
 @property (copy, nonatomic, nonnull) NSString *webPageUrl;
 
 @end
+NS_ASSUME_NONNULL_END

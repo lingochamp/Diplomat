@@ -50,17 +50,23 @@ NSString * __nonnull const kDiplomatAppDebugModeKey = @"diplomat_app_debug_mode"
   self.proxyObjects[name] = object;
 }
 
+-(id __nullable)proxyForName:(NSString * __nonnull)name
+{
+  return self.proxyObjects[name];
+}
+
 - (void)registerWithConfigurations:(NSDictionary * __nonnull)configurations
 {
   [configurations enumerateKeysAndObjectsUsingBlock:^(NSString * name, NSDictionary *configuration, BOOL *stop) {
-    id<DiplomatProxyProtocol> proxy = self.proxyObjects[name];
+    id<DiplomatProxyProtocol> proxy = [self proxyForName:name];
     [proxy registerWithConfiguration:configuration];
   }];
 }
 
 - (BOOL)isInstalled:(NSString * __nonnull)name
 {
-  id<DiplomatProxyProtocol> proxy = self.proxyObjects[name];
+  id<DiplomatProxyProtocol> proxy = [self proxyForName:name];
+
   return [proxy isInstalled];
 }
 
@@ -77,7 +83,7 @@ NSString * __nonnull const kDiplomatAppDebugModeKey = @"diplomat_app_debug_mode"
 
 - (void)authWithName:(NSString * __nonnull)name completed:(DiplomatCompletedBlock __nullable)completedBlock
 {
-  id<DiplomatProxyProtocol> proxy = self.proxyObjects[name];
+  id<DiplomatProxyProtocol> proxy = [self proxyForName:name];
   if (proxy)
   {
     [proxy auth:completedBlock];
@@ -93,7 +99,7 @@ NSString * __nonnull const kDiplomatAppDebugModeKey = @"diplomat_app_debug_mode"
 
 - (void)share:(DTMessage * __nonnull)message name:(NSString * __nonnull)name completed:(DiplomatCompletedBlock __nullable)completedBlock
 {
-  id<DiplomatProxyProtocol> proxy = self.proxyObjects[name];
+  id<DiplomatProxyProtocol> proxy = [self proxyForName:name];
   if (proxy)
   {
     [proxy share:message completed:completedBlock];

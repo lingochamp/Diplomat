@@ -26,7 +26,7 @@ NSString * const kDiplomatTypeWeibo = @"diplomat_weibo";
 
 + (void)load
 {
-  [[Diplomat sharedInstance] registerProxyObject:[self proxy] withName:kDiplomatTypeWeibo];
+  [[Diplomat sharedInstance] registerProxyObject:[[WeiboProxy alloc] init] withName:kDiplomatTypeWeibo];
 }
 
 + (id<DiplomatProxyProtocol> __nonnull)proxy

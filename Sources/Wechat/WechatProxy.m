@@ -30,8 +30,7 @@ NSString * const kWechatSceneTypeKey = @"wechat_scene_type_key";
 
 + (void)load
 {
-  [super load];
-  [[Diplomat sharedInstance] registerProxyObject:[self proxy] withName:kDiplomatTypeWechat];
+  [[Diplomat sharedInstance] registerProxyObject:[[WechatProxy alloc] init] withName:kDiplomatTypeWechat];
 }
 
 - (void)registerWithConfiguration:(NSDictionary * __nonnull)configuration

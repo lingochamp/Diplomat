@@ -28,7 +28,7 @@ NSString * const kTencentQQSceneTypeKey = @"tencent_qq_scene_type_key";
 
 + (void)load
 {
-  [[Diplomat sharedInstance] registerProxyObject:[self proxy] withName:kDiplomatTypeQQ];
+  [[Diplomat sharedInstance] registerProxyObject:[[QQProxy alloc] init] withName:kDiplomatTypeQQ];
 }
 
 - (void)registerWithConfiguration:(NSDictionary * __nonnull)configuration

@@ -52,7 +52,7 @@
 		6130F8781B2A59E5005788E4 /* WechatProxy.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WechatProxy.m; sourceTree = "<group>"; };
 		6130F87B1B2A5A07005788E4 /* QQProxy.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QQProxy.h; sourceTree = "<group>"; };
 		6130F87C1B2A5A07005788E4 /* QQProxy.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QQProxy.m; sourceTree = "<group>"; };
-		616501DE1B0088DF004246A3 /* Tydus.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Tydus.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		616501DE1B0088DF004246A3 /* Diplomat.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Diplomat.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		616501E21B0088DF004246A3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		616501E31B0088DF004246A3 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		616501E51B0088DF004246A3 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -185,7 +185,7 @@
 		616501DF1B0088DF004246A3 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				616501DE1B0088DF004246A3 /* Tydus.app */,
+				616501DE1B0088DF004246A3 /* Diplomat.app */,
 				616501F71B0088DF004246A3 /* DiplomatTests.xctest */,
 			);
 			name = Products;
@@ -311,7 +311,7 @@
 			);
 			name = Diplomat;
 			productName = Diplomat;
-			productReference = 616501DE1B0088DF004246A3 /* Tydus.app */;
+			productReference = 616501DE1B0088DF004246A3 /* Diplomat.app */;
 			productType = "com.apple.product-type.application";
 		};
 		616501F61B0088DF004246A3 /* DiplomatTests */ = {
@@ -550,7 +550,7 @@
 					"$(PROJECT_DIR)/Sources/Weibo",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "com.liulishuo.$(PRODUCT_NAME:rfc1034identifier)";
-				PRODUCT_NAME = Tydus;
+				PRODUCT_NAME = Diplomat;
 				PROVISIONING_PROFILE = "";
 			};
 			name = Debug;
@@ -570,7 +570,7 @@
 					"$(PROJECT_DIR)/Sources/Weibo",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "com.liulishuo.$(PRODUCT_NAME:rfc1034identifier)";
-				PRODUCT_NAME = Tydus;
+				PRODUCT_NAME = Diplomat;
 				PROVISIONING_PROFILE = "";
 			};
 			name = Release;

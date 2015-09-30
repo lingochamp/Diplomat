@@ -252,9 +252,14 @@ NSString * const kWechatSceneTypeKey = @"wechat_scene_type_key";
 
   NSURLSessionTask *task = [[NSURLSession sharedSession] dataTaskWithRequest:request
                                                            completionHandler:^(NSData *data, NSURLResponse *response, NSError *error) {
-                                                             id result = [NSJSONSerialization JSONObjectWithData:data
+                                                             id result = nil;
+                                                             if (data != nil)
+                                                             {
+                                                               result = [NSJSONSerialization JSONObjectWithData:data
                                                                                                          options:NSJSONReadingAllowFragments
                                                                                                            error:&error];
+                                                             }
+
                                                              if (completedBlock)
                                                              {
                                                                dispatch_async(dispatch_get_main_queue(), ^{

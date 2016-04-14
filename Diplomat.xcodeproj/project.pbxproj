@@ -124,6 +124,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		6119EE0F1CBF5483000770DE /* SDK */ = {
+			isa = PBXGroup;
+			children = (
+				6119EE0C1CBF5223000770DE /* TencentOpenAPI.framework */,
+			);
+			name = SDK;
+			sourceTree = "<group>";
+		};
 		6130F8721B2A595D005788E4 /* SDK */ = {
 			isa = PBXGroup;
 			children = (
@@ -241,7 +249,7 @@
 			children = (
 				6130F87B1B2A5A07005788E4 /* QQProxy.h */,
 				6130F87C1B2A5A07005788E4 /* QQProxy.m */,
-				6119EE0C1CBF5223000770DE /* TencentOpenAPI.framework */,
+				6119EE0F1CBF5483000770DE /* SDK */,
 			);
 			path = Tencent;
 			sourceTree = "<group>";

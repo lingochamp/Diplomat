@@ -6,7 +6,7 @@
 //  Copyright (c) 2012年 Tencent. All rights reserved.
 //
 
-#import <Foundation/Foundation.h>
+#import <UIKit/UIKit.h>
 
 /*! @brief 错误码
  *
@@ -125,6 +125,38 @@ enum WXMPWebviewType {
 @property (nonatomic, retain) NSString *returnKey;
 
 @end
+
+
+
+/*! @brief 第三方向微信终端发起拆企业红包的消息结构体
+ *
+ *  第三方向微信终端发起拆企业红包的消息结构体，微信终端处理后会向第三方返回处理结果
+ * @see HBReq
+ */
+@interface HBReq : BaseReq
+
+/** 随机串，防重发 */
+@property (nonatomic, retain) NSString *nonceStr;
+/** 时间戳，防重发 */
+@property (nonatomic, assign) UInt32 timeStamp;
+/** 商家根据微信企业红包开发文档填写的数据和签名 */
+@property (nonatomic, retain) NSString *package;
+/** 商家根据微信企业红包开发文档对数据做的签名 */
+@property (nonatomic, retain) NSString *sign;
+
+@end
+
+
+
+#pragma mark - HBResp
+/*! @brief 微信终端返回给第三方的关于拆企业红包结果的结构体
+ *
+ *  微信终端返回给第三方的关于拆企业红包结果的结构体
+ */
+@interface HBResp : BaseResp
+
+@end
+
 
 
 
@@ -279,6 +311,72 @@ enum WXMPWebviewType {
 @property (nonatomic, retain) NSString* country;
 @end
 
+#pragma mark - OpenTempSessionReq
+/* ! @brief 第三方通知微信，打开临时会话
+ *
+ * 第三方通知微信，打开临时会话
+ */
+@interface OpenTempSessionReq : BaseReq
+/** 需要打开的用户名
+ * @attention 长度不能超过512字节
+ */
+@property (nonatomic, retain) NSString* username;
+/** 开发者自定义参数，拉起临时会话后会发给开发者后台，可以用于识别场景
+ * @attention 长度不能超过32位
+ */
+@property (nonatomic, retain) NSString*  sessionFrom;
+@end
+
+#pragma mark - OpenWebviewReq
+/* ! @brief 第三方通知微信启动内部浏览器，打开指定网页
+ *
+ *  第三方通知微信启动内部浏览器，打开指定Url对应的网页
+ */
+@interface OpenWebviewReq : BaseReq
+/** 需要打开的网页对应的Url
+ * @attention 长度不能超过1024
+ */
+@property(nonatomic,retain)NSString* url;
+
+@end
+
+#pragma mark - OpenWebviewResp
+/*! @brief 微信终端向第三方程序返回的OpenWebviewReq处理结果
+ *
+ * 第三方程序向微信终端发送OpenWebviewReq后，微信发送回来的处理结果，该结果用OpenWebviewResp表示
+ */
+@interface OpenWebviewResp : BaseResp
+
+@end
+
+
+#pragma mark - OpenTempSessionResp
+/*! @brief 微信终端向第三方程序返回的OpenTempSessionReq处理结果。
+ *
+ * 第三方程序向微信终端发送OpenTempSessionReq后，微信发送回来的处理结果，该结果用OpenTempSessionResp表示。
+ */
+@interface OpenTempSessionResp : BaseResp
+
+@end
+
+#pragma mark - OpenRankListReq
+/* ! @brief 第三方通知微信，打开硬件排行榜
+ *
+ * 第三方通知微信，打开硬件排行榜
+ */
+@interface OpenRankListReq : BaseReq
+
+@end
+
+#pragma mark - OpenRanklistResp
+/*! @brief 微信终端向第三方程序返回的OpenRankListReq处理结果。
+ *
+ * 第三方程序向微信终端发送OpenRankListReq后，微信发送回来的处理结果，该结果用OpenRankListResp表示。
+ */
+@interface OpenRankListResp : BaseResp
+
+@end
+
 #pragma mark - JumpToBizProfileReq
 /* ! @brief 第三方通知微信，打开指定微信号profile页面
  *
@@ -364,7 +462,6 @@ enum WXMPWebviewType {
  */
 @property (nonatomic,retain) NSArray* cardAry;
 @end
-
 
 #pragma mark - WXMediaMessage
 

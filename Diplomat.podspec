@@ -32,7 +32,7 @@ Pod::Spec.new do |s|
   s.subspec 'Tencent' do |tencent|
     tencent.dependency 'Diplomat/Core'
     tencent.source_files = "Sources/Tencent/*.{h,m}"
-    tencent.vendored_frameworks = "TencentOpenAPI.framework"
+    tencent.vendored_frameworks = "Sources/Tencent/TencentOpenAPI.framework"
   end
   
 end

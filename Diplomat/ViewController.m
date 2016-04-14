@@ -24,6 +24,8 @@ static enum WXScene kWechatScene = WXSceneSession;
 - (void)viewDidLoad
 {
   [super viewDidLoad];
+  
+  [[[Diplomat sharedInstance] proxyForName:kDiplomatTypeWeibo] setReturnAuthToken:YES]; // 微博 Auth 只返回 accessToken 和 userId 让服务端获取用户信息
   // Do any additional setup after loading the view, typically from a nib.
 }
 

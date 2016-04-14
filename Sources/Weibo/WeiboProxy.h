@@ -14,7 +14,7 @@
 extern NSString * __nonnull const kDiplomatTypeWeibo;
 
 @interface WeiboProxy : NSObject <DiplomatProxyProtocol>
-
+@property (assign, nonatomic) BOOL returnAuthToken;
 @end
 
 @interface DTMessage (Weibo)

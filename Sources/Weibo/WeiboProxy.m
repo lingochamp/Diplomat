@@ -125,8 +125,24 @@ NSString * const kDiplomatTypeWeibo = @"diplomat_weibo";
   {
     NSString *token = [(WBAuthorizeResponse *)response accessToken];
     NSString *userID = [(WBAuthorizeResponse *)response userID];
-    [self updateWeiboToken:token userId:userID];
-    [self getWeiboUserInfoWithUserId:userID accessToken:token completed:doneBlock];
+    if (token && userID)
+    {
+      [self updateWeiboToken:token userId:userID];
+      if (self.returnAuthToken)
+      {
+        doneBlock(@{@"userId": userID, @"accessToken": token}, nil);
+      }
+      else
+      {
+        [self getWeiboUserInfoWithUserId:userID accessToken:token completed:doneBlock];
+      }
+    }
+    else
+    {
+      doneBlock(nil, [NSError errorWithDomain:kWeiboErrorDomain
+                                         code:response.statusCode
+                                     userInfo:@{NSLocalizedDescriptionKey: @"微博请求返回参数缺失"}]);
+    }
   }
 }
 

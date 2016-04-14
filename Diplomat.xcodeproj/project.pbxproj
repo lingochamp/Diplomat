@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		6119EE0D1CBF5223000770DE /* TencentOpenAPI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6119EE0C1CBF5223000770DE /* TencentOpenAPI.framework */; };
 		611C3BB01B4A35EB00EAB4CE /* Diplomat-acknowledgements.md in Sources */ = {isa = PBXBuildFile; fileRef = 611C3BAF1B4A35EB00EAB4CE /* Diplomat-acknowledgements.md */; };
 		6130F8751B2A5996005788E4 /* WeiboProxy.m in Sources */ = {isa = PBXBuildFile; fileRef = 6130F8741B2A5996005788E4 /* WeiboProxy.m */; };
 		6130F8791B2A59E5005788E4 /* WechatProxy.m in Sources */ = {isa = PBXBuildFile; fileRef = 6130F8781B2A59E5005788E4 /* WechatProxy.m */; };
@@ -18,7 +19,6 @@
 		616501EF1B0088DF004246A3 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 616501EE1B0088DF004246A3 /* Images.xcassets */; };
 		616501F21B0088DF004246A3 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 616501F01B0088DF004246A3 /* LaunchScreen.xib */; };
 		616501FE1B0088DF004246A3 /* DiplomatTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 616501FD1B0088DF004246A3 /* DiplomatTests.m */; };
-		6165021F1B008ED4004246A3 /* libTencentOpenAPI.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 616502091B008ED4004246A3 /* libTencentOpenAPI.a */; };
 		616502201B008ED4004246A3 /* libWeChatSDK.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 616502101B008ED4004246A3 /* libWeChatSDK.a */; };
 		616502211B008ED4004246A3 /* libWeiboSDK.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 616502141B008ED4004246A3 /* libWeiboSDK.a */; };
 		616502221B008ED4004246A3 /* WeiboSDK.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 6165021C1B008ED4004246A3 /* WeiboSDK.bundle */; };
@@ -45,6 +45,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		6119EE0C1CBF5223000770DE /* TencentOpenAPI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = TencentOpenAPI.framework; sourceTree = "<group>"; };
 		611C3BAF1B4A35EB00EAB4CE /* Diplomat-acknowledgements.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = "Diplomat-acknowledgements.md"; sourceTree = "<group>"; };
 		6130F8731B2A5996005788E4 /* WeiboProxy.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WeiboProxy.h; sourceTree = "<group>"; };
 		6130F8741B2A5996005788E4 /* WeiboProxy.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WeiboProxy.m; sourceTree = "<group>"; };
@@ -65,12 +66,6 @@
 		616501F71B0088DF004246A3 /* DiplomatTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DiplomatTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		616501FC1B0088DF004246A3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		616501FD1B0088DF004246A3 /* DiplomatTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DiplomatTests.m; sourceTree = "<group>"; };
-		616502091B008ED4004246A3 /* libTencentOpenAPI.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libTencentOpenAPI.a; sourceTree = "<group>"; };
-		6165020A1B008ED4004246A3 /* QQApiInterface.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QQApiInterface.h; sourceTree = "<group>"; };
-		6165020B1B008ED4004246A3 /* QQApiInterfaceObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QQApiInterfaceObject.h; sourceTree = "<group>"; };
-		6165020C1B008ED4004246A3 /* sdkdef.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = sdkdef.h; sourceTree = "<group>"; };
-		6165020D1B008ED4004246A3 /* TencentOAuth.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TencentOAuth.h; sourceTree = "<group>"; };
-		6165020E1B008ED4004246A3 /* TencentOAuthObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TencentOAuthObject.h; sourceTree = "<group>"; };
 		616502101B008ED4004246A3 /* libWeChatSDK.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libWeChatSDK.a; sourceTree = "<group>"; };
 		616502111B008ED4004246A3 /* WXApi.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WXApi.h; sourceTree = "<group>"; };
 		616502121B008ED4004246A3 /* WXApiObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WXApiObject.h; sourceTree = "<group>"; };
@@ -108,6 +103,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				61A81AA71B54F3DC00CF33F7 /* CoreTelephony.framework in Frameworks */,
+				6119EE0D1CBF5223000770DE /* TencentOpenAPI.framework in Frameworks */,
 				616502331B034FCC004246A3 /* ImageIO.framework in Frameworks */,
 				6165022D1B030403004246A3 /* libsqlite3.dylib in Frameworks */,
 				6165022B1B0302DD004246A3 /* libc++.dylib in Frameworks */,
@@ -115,7 +111,6 @@
 				616502271B03021C004246A3 /* libz.dylib in Frameworks */,
 				616502201B008ED4004246A3 /* libWeChatSDK.a in Frameworks */,
 				616502211B008ED4004246A3 /* libWeiboSDK.a in Frameworks */,
-				6165021F1B008ED4004246A3 /* libTencentOpenAPI.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -154,19 +149,6 @@
 				616502101B008ED4004246A3 /* libWeChatSDK.a */,
 				616502111B008ED4004246A3 /* WXApi.h */,
 				616502121B008ED4004246A3 /* WXApiObject.h */,
-			);
-			name = SDK;
-			sourceTree = "<group>";
-		};
-		6130F87A1B2A59F2005788E4 /* SDK */ = {
-			isa = PBXGroup;
-			children = (
-				616502091B008ED4004246A3 /* libTencentOpenAPI.a */,
-				6165020A1B008ED4004246A3 /* QQApiInterface.h */,
-				6165020B1B008ED4004246A3 /* QQApiInterfaceObject.h */,
-				6165020C1B008ED4004246A3 /* sdkdef.h */,
-				6165020D1B008ED4004246A3 /* TencentOAuth.h */,
-				6165020E1B008ED4004246A3 /* TencentOAuthObject.h */,
 			);
 			name = SDK;
 			sourceTree = "<group>";
@@ -259,7 +241,7 @@
 			children = (
 				6130F87B1B2A5A07005788E4 /* QQProxy.h */,
 				6130F87C1B2A5A07005788E4 /* QQProxy.m */,
-				6130F87A1B2A59F2005788E4 /* SDK */,
+				6119EE0C1CBF5223000770DE /* TencentOpenAPI.framework */,
 			);
 			path = Tencent;
 			sourceTree = "<group>";
@@ -540,6 +522,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Sources/Tencent",
+				);
 				INFOPLIST_FILE = Diplomat/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -560,6 +546,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Sources/Tencent",
+				);
 				INFOPLIST_FILE = Diplomat/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";

@@ -10,8 +10,8 @@
 
 #import "Diplomat.h"
 
-#import "TencentOAuth.h"
-#import "QQApiInterface.h"
+#import <TencentOpenAPI/TencentOAuth.h>
+#import <TencentOpenAPI/QQApiInterface.h>
 
 NS_ASSUME_NONNULL_BEGIN
 extern NSString * const kDiplomatTypeQQ;

@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name         = "Diplomat"
-  s.version      = "0.3.5"
+  s.version      = "0.3.6"
   s.summary      = "The third party SDKs unified API lib."
   s.homepage     = "https://github.com/cloudorz/Diplomat"
   s.license      = { :type => 'MIT License', :file => 'LICENSE' }
@@ -32,7 +32,7 @@ Pod::Spec.new do |s|
   s.subspec 'Tencent' do |tencent|
     tencent.dependency 'Diplomat/Core'
     tencent.source_files = "Sources/Tencent/*.{h,m}"
-    tencent.vendored_libraries = "Sources/Tencent/*.a"
+    tencent.vendored_frameworks = "TencentOpenAPI.framework"
   end
   
 end

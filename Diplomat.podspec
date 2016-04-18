@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name         = "Diplomat"
-  s.version      = "0.3.6"
+  s.version      = "0.3.7"
   s.summary      = "The third party SDKs unified API lib."
   s.homepage     = "https://github.com/cloudorz/Diplomat"
   s.license      = { :type => 'MIT License', :file => 'LICENSE' }

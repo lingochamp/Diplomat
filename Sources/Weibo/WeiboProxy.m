@@ -170,6 +170,7 @@ NSString * const kDiplomatTypeWeibo = @"diplomat_weibo";
                      dtUser.avatar = user.avatarHDUrl;
                      dtUser.gender = [user.gender isEqualToString:@"m"] ?  @"male" : @"female";
                      dtUser.provider = @"weibo";
+                     dtUser.accessToken = token;
                      dtUser.rawData = user.originParaDict;
                    }
 

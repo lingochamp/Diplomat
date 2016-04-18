@@ -209,6 +209,7 @@ NSString * const kTencentQQSceneTypeKey = @"tencent_qq_scene_type_key";
         dtUser.gender = [userInfo[@"gender"] isEqualToString:@"男"] ? @"male" : @"female";
         dtUser.avatar = userInfo[@"figureurl_qq_2"];
         dtUser.provider = @"qqspace";
+        dtUser.accessToken = self.tencentOAuth.accessToken;
         dtUser.rawData = userInfo;
 
         doneBlock(dtUser, nil);

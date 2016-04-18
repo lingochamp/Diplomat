@@ -194,6 +194,7 @@ NSString * const kWechatSceneTypeKey = @"wechat_scene_type_key";
                                                         dtUser.avatar = result[@"headimgurl"];
                                                         dtUser.provider = @"wechat";
                                                         dtUser.rawData = result;
+                                                        dtUser.accessToken = accessToken;
                                                       }
 
                                                       if (completedBlock)

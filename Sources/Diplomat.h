@@ -126,6 +126,8 @@ typedef void (^DiplomatCompletedBlock)(id __nullable result, NSError * __nullabl
 /** @brief 登录授权时的第三方来源，例如：weibo */
 @property (copy, nonatomic, nonnull) NSString * provider;
 @property (copy, nonatomic, nullable) NSString * gender;
+/** @brief 第三方返回的 accessToken 如：微博 */
+@property (copy, nonatomic, nonnull) NSString * accessToken;
 /** @brief 获取到的完成原始的用户信息 */
 @property (strong, nonatomic, nonnull) NSDictionary * rawData;
 

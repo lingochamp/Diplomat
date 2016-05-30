@@ -327,7 +327,6 @@ static NSString *urlEncode(id object)
   message.thumbData = UIImageJPEGRepresentation([self.thumbnailableImage resizedImage:CGSizeMake(240, 240) interpolationQuality:kCGInterpolationMedium], 0.65);
   WXImageObject *imageObect = [WXImageObject object];
   imageObect.imageData = self.imageData;
-  imageObect.imageUrl = self.imageUrl;
 
   message.mediaObject = imageObect;
 

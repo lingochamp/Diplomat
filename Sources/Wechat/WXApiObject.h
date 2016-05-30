@@ -6,7 +6,7 @@
 //  Copyright (c) 2012年 Tencent. All rights reserved.
 //
 
-#import <Foundation/Foundation.h>
+#import <UIKit/UIKit.h>
 
 /*! @brief 错误码
  *

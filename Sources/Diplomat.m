@@ -152,7 +152,7 @@ NSString * __nonnull const kDiplomatAppDebugModeKey = @"diplomat_app_debug_mode"
 @implementation DTImageMessage
 - (NSString *)description
 {
-  return [[super description] stringByAppendingFormat:@"image url: %@ \n image data: %@ \n", self.imageUrl, self.imageData];
+  return [[super description] stringByAppendingFormat:@"image data: %@ \n", self.imageData];
 }
 @end
 

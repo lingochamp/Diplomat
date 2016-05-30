@@ -164,7 +164,7 @@ typedef void (^DiplomatCompletedBlock)(id __nullable result, NSError * __nullabl
 @property (strong, nonatomic, nullable) NSData *imageData;
 
 /** @brief 当分享一张图片时，图片的远程 URL。与 imageData 二选一。 */
-@property (copy, nonatomic, nullable) NSString *imageUrl;
+@property (copy, nonatomic, nullable) NSString *imageUrl DEPRECATED_MSG_ATTRIBUTE("Use `imageData` instead. url not work in Wechat SDK 1.7.1");
 
 @end
 

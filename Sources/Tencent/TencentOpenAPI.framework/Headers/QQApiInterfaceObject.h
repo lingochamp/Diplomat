@@ -28,6 +28,8 @@ typedef enum
     EQQAPIQZONENOTSUPPORTTEXT = 10000,
     //qzone分享不支持image类型分享
     EQQAPIQZONENOTSUPPORTIMAGE = 10001,
+    //当前QQ版本太低，需要更新至新版本才可以支持
+    EQQAPIVERSIONNEEDUPDATE = 10002,
 } QQApiSendResultCode;
 
 #pragma mark - QQApiObject(分享对象类型)
@@ -173,6 +175,47 @@ typedef enum QQApiURLTargetType{
  用于分享图片内容的对象，是一个指定为图片类型的<code>QQApiExtendObject</code>
  */
 @interface QQApiImageObject : QQApiExtendObject
+@end
+
+// QQApiImageArrayForQZoneObject
+/** @brief 图片对象
+ 用于分享图片到空间，走写说说路径，是一个指定为图片类型的，当图片数组为空时，默认走文本写说说<code>QQApiObject</code>
+ */
+@interface QQApiImageArrayForQZoneObject : QQApiObject
+
+@property(nonatomic,retain) NSArray* imageDataArray;///图片数组
+
+/**
+ 初始化方法
+ @param imageDataArray 图片数组
+ @param title 写说说的内容，可以为空
+ */
+- (id)initWithImageArrayData:(NSArray*)imageDataArray title:(NSString*)title;
+
+/**
+ helper方法获取一个autorelease的<code>QQApiExtendObject</code>对象
+ @param title 写说说的内容，可以为空
+ @param imageDataArray 发送的多张图片队列
+ @return
+ 一个自动释放的<code>QQApiExtendObject</code>实例
+ */
++ (id)objectWithimageDataArray:(NSArray*)imageDataArray title:(NSString*)title;
+
+@end
+
+// QQApiVideoForQZoneObject
+/** @brief 视频对象
+ 用于分享视频到空间，走写说说路径<code>QQApiObject</code>
+ assetURL可传ALAsset的ALAssetPropertyAssetURL，或者PHAsset的localIdentifier
+ */
+@interface QQApiVideoForQZoneObject : QQApiObject
+
+@property(nonatomic, retain) NSString *assetURL;
+
+- (id)initWithAssetURL:(NSString*)assetURL title:(NSString*)title;
+
++ (id)objectWithAssetURL:(NSString*)assetURL title:(NSString*)title;
+
 @end
 
 // QQApiWebImageObject
@@ -399,6 +442,19 @@ typedef enum QQApiURLTargetType{
 
 -(id)initWithGameConsortium:(NSString*)signature unionid:(NSString*)unionid zoneID:(NSString*)zoneID appDisplayName:(NSString*)appDisplayName; ///<初始化方法
 +(id)objectWithGameConsortium:(NSString*)signature unionid:(NSString*)unionid zoneID:(NSString*)zoneID appDisplayName:(NSString*)appDisplayName; ///<工厂方法，获取一个QQApiAddFriendObject对象.
+
+@end
+
+// QQApiGameConsortiumBindingGroupObject
+/** \brief 加入群
+ */
+@interface QQApiJoinGroupObject : QQApiObject
+@property (nonatomic,retain)NSString* groupUin;
+@property (nonatomic,retain)NSString* groupKey;
+
+- (id)initWithGroupInfo:(NSString*)groupUin key:(NSString*)groupKey; ///<初始化方法
++ (id)objectWithGroupInfo:(NSString*)groupUin key:(NSString*)groupKey; ///<同时提供群号和群KEY 工厂方法，获取一个QQApiAddFriendObject对象.
++ (id)objectWithGroupKey:(NSString*)groupKey; ///<只需要群的KEY 工厂方法，获取一个QQApiAddFriendObject对象.
 
 @end
 

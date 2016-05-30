@@ -321,6 +321,11 @@
  */
 @property (nonatomic, retain) TCRequiredStr paramFromurl;
 
+/**
+ * nswb string	值为1时，表示分享不默认同步到微博，其他值或者不传此参数表示默认同步到微博。
+ */
+@property (nonatomic, retain) TCOptionalStr paramNswb;
+
 @end
 
 #pragma mark -

@@ -1,4 +1,31 @@
 重要!
+SDK1.8.0
+1. SDK支持打开小程序
+2. SDK分享小程序支持shareTicket
+
+SDK1.7.9
+1. SDK订阅一次性消息
+
+SDK1.7.8
+1 SDK分享小程序支持大图
+
+SDK1.7.7
+1 增加SDK分享小程序
+2 增加选择发票接口
+
+SDK1.7.6
+1. 提高稳定性
+1 修复mta崩溃
+2  新增接口支持开发者关闭mta数据统计上报
+
+SDK1.7.5
+1. 提高稳定性
+2. 加快registerApp接口启动速度
+
+SDK1.7.4
+1. 更新支持iOS启用 ATS(App Transport Security)
+2. 需要在工程中链接CFNetwork.framework
+3. 在工程配置中的”Other Linker Flags”中加入”-Objc -all_load”
 
 SDK1.7.3
 1. 增强稳定性，适配iOS10

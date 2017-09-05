@@ -83,6 +83,12 @@ typedef enum
 /** 授权方式(Client Side Token或者Server Side Code) */
 @property(nonatomic, assign) TencentAuthMode authMode;
 
+/** union id */
+@property(nonatomic, retain) NSString* unionid;
+
+/** 第三方在授权登录/分享 时选择 QQ，还是TIM 。在授权前一定要指定其中一个类型*/
+@property(nonatomic, assign) TencentAuthShareType authShareType;
+
 /**
  * 用来获得当前sdk的版本号
  * \return 返回sdk版本号
@@ -120,6 +126,13 @@ typedef enum
  **/
 + (QQVersion)iphoneQQVersion;
 
+
+/**
+ * 用来获得当前手机TIM的版本号
+ * \return 返回手机qq版本号
+ **/
++ (QQVersion)iphoneTIMVersion;
+
 /**
  * 初始化TencentOAuth对象
  * \param appId 第三方应用在互联开放平台申请的唯一标识
@@ -135,12 +148,24 @@ typedef enum
  * \return YES:安装 NO:没安装
  */
 + (BOOL)iphoneQQInstalled;
+
+/**
+ * 判断用户手机上是否安装手机TIM
+ * \return YES:安装 NO:没安装
+ */
++ (BOOL)iphoneTIMInstalled;
  
 /**
  * 判断用户手机上的手机QQ是否支持SSO登录
  * \return YES:支持 NO:不支持
  */
 + (BOOL)iphoneQQSupportSSOLogin;
+
+/**
+ * 判断用户手机上的手机TIM是否支持SSO登录
+ * \return YES:支持 NO:不支持
+ */
++ (BOOL)iphoneTIMSupportSSOLogin;
 
 /**
  * 判断用户手机上是否安装手机QZone
@@ -192,6 +217,12 @@ typedef enum
  * \return 授权调用是否成功
  */
 - (BOOL)reauthorizeWithPermissions:(NSArray *)permissions;
+
+/**
+ * 获取UnindID,可以根据UnindID的比较来确定OpenID是否属于同一个用户
+ * \return NO未登录，信息不足；YES条件满足，发送请求成功，请等待回调
+ */
+- (BOOL)RequestUnionId;
 
 /**
  * (静态方法)处理应用拉起协议
@@ -304,6 +335,11 @@ typedef enum
  * 登录时权限信息的获得
  */
 - (NSArray *)getAuthorizedPermissions:(NSArray *)permissions withExtraParams:(NSDictionary *)extraParams;
+
+/**
+ * unionID获得
+ */
+- (void)didGetUnionID;
 
 @end
 

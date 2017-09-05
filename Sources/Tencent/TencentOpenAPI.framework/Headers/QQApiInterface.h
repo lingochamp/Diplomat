@@ -81,6 +81,12 @@
 + (BOOL)isQQInstalled;
 
 /**
+ 检测是否已安装TIM
+ \return 如果TIM已安装则返回YES，否则返回NO
+ */
++ (BOOL)isTIMInstalled;
+
+/**
  批量检测QQ号码是否在线
  */
 + (void)getQQUinOnlineStatues:(NSArray *)QQUins delegate:(id<QQApiInterfaceDelegate>)delegate;
@@ -92,10 +98,22 @@
 + (BOOL)isQQSupportApi;
 
 /**
+ 检测TIM是否支持API调用
+ \return 如果当前安装TIM版本支持API调用则返回YES，否则返回NO
+ */
++ (BOOL)isTIMSupportApi;
+
+/**
  启动QQ
  \return 成功返回YES，否则返回NO
  */
 + (BOOL)openQQ;
+
+/**
+ 启动TIM
+ \return 成功返回YES，否则返回NO
+ */
++ (BOOL)openTIM;
 
 /**
  获取QQ下载地址
@@ -104,5 +122,13 @@
  \return iPhoneQQ下载地址
  */
 + (NSString *)getQQInstallUrl;
+
+/**
+ 获取TIM下载地址
+ 
+ 如果App通过<code>QQApiInterface#isTIMInstalled</code>和<code>QQApiInterface#isTIMSupportApi</code>检测发现TIM没安装或当前版本TIM不支持API调用，可引导用户通过打开此链接下载最新版TIM。
+ \return iPhoneTIM下载地址
+ */
++ (NSString *)getTIMInstallUrl;
 
 @end

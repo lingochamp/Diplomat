@@ -34,6 +34,23 @@ typedef enum QQVersion
     kQQVersion4_7,      //4.7版本 不确定新支持了什么样的属性
 } QQVersion;
 
+
+/**
+ * \breif TIM的当前版本
+ */
+typedef enum TIMVersion {
+    kTIMUinstall,
+    kTIMVersion1_1,
+}TIMVersion;
+
+/**
+ * \breif 授权/分享 方式
+ */
+typedef enum TencentAuthShareType {
+    AuthShareType_QQ,
+    AuthShareType_TIM,
+}TencentAuthShareType;
+
 /**
  * \brief APIResponse.retCode可能的枚举常量
  */

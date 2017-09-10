@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		6119EE0D1CBF5223000770DE /* TencentOpenAPI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6119EE0C1CBF5223000770DE /* TencentOpenAPI.framework */; };
-		611C3BB01B4A35EB00EAB4CE /* Diplomat-acknowledgements.md in Sources */ = {isa = PBXBuildFile; fileRef = 611C3BAF1B4A35EB00EAB4CE /* Diplomat-acknowledgements.md */; };
 		6130F8751B2A5996005788E4 /* WeiboProxy.m in Sources */ = {isa = PBXBuildFile; fileRef = 6130F8741B2A5996005788E4 /* WeiboProxy.m */; };
 		6130F8791B2A59E5005788E4 /* WechatProxy.m in Sources */ = {isa = PBXBuildFile; fileRef = 6130F8781B2A59E5005788E4 /* WechatProxy.m */; };
 		6130F87D1B2A5A07005788E4 /* QQProxy.m in Sources */ = {isa = PBXBuildFile; fileRef = 6130F87C1B2A5A07005788E4 /* QQProxy.m */; };
@@ -328,7 +327,7 @@
 		616501D61B0088DF004246A3 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0700;
+				LastUpgradeCheck = 0830;
 				ORGANIZATIONNAME = "Cloud Dai";
 				TargetAttributes = {
 					616501DD1B0088DF004246A3 = {
@@ -390,7 +389,6 @@
 			files = (
 				616501EA1B0088DF004246A3 /* ViewController.m in Sources */,
 				616501E71B0088DF004246A3 /* AppDelegate.m in Sources */,
-				611C3BB01B4A35EB00EAB4CE /* Diplomat-acknowledgements.md in Sources */,
 				616501E41B0088DF004246A3 /* main.m in Sources */,
 				616502251B009465004246A3 /* Diplomat.m in Sources */,
 				61A81AA41B54D6A600CF33F7 /* UIImage+DiplomatResize.m in Sources */,
@@ -451,8 +449,10 @@
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				CODE_SIGN_IDENTITY = "";
@@ -476,7 +476,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				OTHER_LDFLAGS = "-all_load";
@@ -498,8 +498,10 @@
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				CODE_SIGN_IDENTITY = "";
@@ -516,7 +518,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				OTHER_LDFLAGS = "-all_load";
 				PROVISIONING_PROFILE = "1421fbe8-4cf3-4b55-88c9-d3b49055fbd7";
@@ -535,7 +537,7 @@
 					"$(PROJECT_DIR)/Sources/Tencent",
 				);
 				INFOPLIST_FILE = Diplomat/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
@@ -559,7 +561,7 @@
 					"$(PROJECT_DIR)/Sources/Tencent",
 				);
 				INFOPLIST_FILE = Diplomat/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",

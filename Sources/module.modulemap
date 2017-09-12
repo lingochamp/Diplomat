@@ -1,4 +1,0 @@
-module Diplomat {
-  header "Diplomat.h"
-  export *
-  }

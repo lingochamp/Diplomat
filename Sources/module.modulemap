@@ -1,0 +1,6 @@
+module Diplomat {
+  umbrella header "Diplomat.h"
+  umbrella header "QQProxy.h"
+  umbrella header "WechatProxy.h"
+  umbrella header "WeiboProxy.h"
+  }

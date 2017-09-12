@@ -10,10 +10,12 @@ Pod::Spec.new do |s|
   s.frameworks = "SystemConfiguration", "ImageIO", "CoreTelephony"
   s.libraries = "stdc++", "sqlite3", "z"
   s.requires_arc = true
+  s.module_map = "Sources/module.modulemap"
 
   s.subspec 'Core' do |core|
     core.source_files = "Sources/*.{h,m}"
     core.resources = "Sources/*.md"
+    core.public_header_files = "Sources/*.h"
   end
 
   s.subspec 'Weibo' do |weibo|
@@ -21,18 +23,21 @@ Pod::Spec.new do |s|
     weibo.source_files = "Sources/Weibo/*.{h,m}"
     weibo.resources = "Sources/Weibo/*.bundle"
     weibo.vendored_libraries = "Sources/Weibo/*.a"
+    weibo.public_header_files = "Sources/Weibo/*.h"
   end
 
   s.subspec 'Wechat' do |wechat|
     wechat.dependency 'Diplomat/Core'
     wechat.source_files = "Sources/Wechat/*.{h,m}"
     wechat.vendored_libraries = "Sources/Wechat/*.a"
+    wechat.public_header_files = "Sources/Wechat/*.h"
   end
 
   s.subspec 'Tencent' do |tencent|
     tencent.dependency 'Diplomat/Core'
     tencent.source_files = "Sources/Tencent/*.{h,m}"
     tencent.vendored_frameworks = "Sources/Tencent/TencentOpenAPI.framework"
+    tencent.public_header_files = "Sources/Tencent/*.h"
   end
   
 end

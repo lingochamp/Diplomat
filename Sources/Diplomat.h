@@ -56,9 +56,7 @@ typedef void (^DiplomatCompletedBlock)(id __nullable result, NSError * __nullabl
 /**
  @brief 使用第三方的 AppId 或者 AppKey 和 AppSecret 来配置 Diplomat 。
 
- @param type 第三方的类型，必需。参见：DiplomatType 。
  @param configurations 第三方应用的相关配置, 按 Diplomat type 配置对应的 AppId, AppSecret, redirectUrl，其中 AppId 必需。
- @param secret 第三方应用的 Appsecret ，非必需。微信需要填写用来请求用户的信息。
 
  */
 - (void)registerWithConfigurations:(NSDictionary * __nonnull)configurations;
@@ -81,9 +79,9 @@ typedef void (^DiplomatCompletedBlock)(id __nullable result, NSError * __nullabl
 /**
  @brief 通过第三方授权登录。
  
- @discussion 通过不同的 DiplomatType 来授权不同的第三方登录。其中 QZone 统一使用 DiplomatTypeQQ 授权。
+ @discussion 通过不同的 kDiplomatTypexxxx 来授权不同的第三方登录。其中 QZone 统一使用 kDiplomatTypeQQ 授权。
  
- @param type 第三方的类型，必需。参见：DiplomatType 。
+ @param name 第三方的类型名称，必需。kDiplomatTypexxxx 。
  @param completedBlock 当登录授权过程结束后，成功或失败都会回调。 参见：DiplomatCompletedBlock
  */
 
@@ -92,7 +90,7 @@ typedef void (^DiplomatCompletedBlock)(id __nullable result, NSError * __nullabl
 /** 
  @brief 判断对应第三方 App 是否被安装。
 
- @param type 第三方的类型，必需。参见：DiplomatType 。
+ @param name 第三方的类型名称，必需。kDiplomatTypexxxx
 
  @return 返回值为 Yes 表示已安装此 App, NO 表示未安装此 App.
  */
@@ -109,7 +107,7 @@ typedef void (^DiplomatCompletedBlock)(id __nullable result, NSError * __nullabl
  @see setWechatScene:
  
  @param message 分享的内容，文本，多媒体 DTMessage
- @param type 第三方的类型，必需。参见：DiplomatType 。
+ @param name 第三方的类型，必需。kDiplomatTypexxxx 。
  @param completedBlock 当分享结束后，成功或失败都会回调。参见：DiplomatCompletedBlock
  */
 

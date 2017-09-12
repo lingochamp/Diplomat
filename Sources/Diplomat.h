@@ -111,7 +111,7 @@ typedef void (^DiplomatCompletedBlock)(id __nullable result, NSError * __nullabl
  @param completedBlock 当分享结束后，成功或失败都会回调。参见：DiplomatCompletedBlock
  */
 
-- (void)share:(DTMessage * __nonnull)message name:(NSString * __nonnull)name completed:(DiplomatCompletedBlock __nullable)compltetedBlock;
+- (void)share:(DTMessage * __nonnull)message name:(NSString * __nonnull)name completed:(DiplomatCompletedBlock __nullable)completedBlock;
 
 @end
 
